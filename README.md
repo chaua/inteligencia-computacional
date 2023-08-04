@@ -1,9 +1,10 @@
-# Inteligência Computacional
+# 📘 Inteligência Computacional
 
 Repositório da disciplina de Inteligência Computacional.
 
+## Links
 
-# Material de apoio
-
-- [Livro da disciplina](https://chaua.gitbook.io/inteligencia-computacional/): plano de aula, cronogramas e estudos dirigidos.
+### [**📚 Livro da disciplina**](https://chaua.gitbook.io/programacao-mobile/)
+- Plano de aula, cronogramas, estudos dirigidos, notas de aula e material complementar.
+     
 
