@@ -1,0 +1,348 @@
+% =======================================================================
+% =                                                                     =
+% = ABNTEX - UTP                                                        =
+% =                                                                     =
+% =======================================================================
+% -----------------------------------------------------------------------
+% Author: Chaua Queirolo
+% Data:   11/08/2023
+% -----------------------------------------------------------------------
+\documentclass[12pt,oneside,a4paper,chapter=TITLE,section=TITLE,sumario
+=tradicional]{abntex2}
+
+% Regras da abnt
+\usepackage{packages/abnt-UTP}
+\usepackage{lipsum}
+\usepackage{setspace}
+
+% =======================================================================
+% =                                                                     =
+% = DADOS DO TRABALHO                                                   =
+% =                                                                     =
+% =======================================================================
+
+% Informações de dados para CAPA e FOLHA DE ROSTO
+\titulo{Aplicação de IA no ensino do Xadrez}
+
+\autor{Chauã Queirolo}
+
+\orientador{Prof. Vinicius Marcondes}
+
+\preambulo{Trabalho de Conclusão de Curso apresentado ao curso de Bacharelado
+em Ciência da Computação da Faculdade de Ciências Exatas e de Tecnologia da 
+Universidade Tuiuti do Paraná, como requisito à obtenção ao grau de Bacharel.}
+
+\instituicao{Universidade Tuiuti do Paraná}
+\local{Curitiba}
+\data{2023}
+
+% =======================================================================
+% =                                                                     =
+% = DOCUMENTO                                                           =
+% =                                                                     =
+% =======================================================================
+\begin{document}
+
+% -----------------------------------------------------------------------
+% - ELEMENTOS PRÉ-TEXTUAIS                                              -
+% -----------------------------------------------------------------------
+
+% Capa e folha de rosto
+\imprimircapa
+\imprimirfolhaderosto
+
+% Resumo
+% - Resumo deve ter no máximo 30 linhas - parágrafo único
+% - Resumo do trabalho inteiro
+% - Não pode ter citações
+\begin{resumo}
+    
+    
+
+  \palavraschave{Xadrez}
+        
+\end{resumo}
+
+% Listas (opcionais)
+\listadefiguras
+%\listadegraficos
+% \listadetabelas
+\listadequadros
+%\listadecodigos
+%\listadealgoritmos
+
+% Lista de siglas, abreviaturas e acrônimos
+% - Alterar o nome de acordo com os elementos que forem utilizados
+% - Precisa estar em ordem alfabética
+\begin{siglas}
+  \item[IA] Inteligência Artificial
+  \item[ML] \textit{Machine Learning} 
+  \item[ROS] \textit{Robot Operating System}
+\end{siglas}
+
+% Lista de símbolos
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+
+% Sumário (obrigatório)
+\sumario
+
+% -----------------------------------------------------------------------
+% -                                                                     -
+% - ELEMENTOS TEXTUAIS                                                  -
+% -                                                                     -
+% -----------------------------------------------------------------------
+% Inicia a numeração das páginas
+\textual
+
+% -----------------------------------------------------------------------
+% -----------------------------------------------------------------------
+\chapter{Introdução}
+\label{cap:introducao}
+
+
+% Esqueleto da introdução:
+%
+% 1. Contexto: situa o tema do trabalho
+%
+% 2. Descrição do problema e motivação
+% - Os desafios do ensino do xadrez .. []
+% - O xadrez ajuda o raciocínio crítico .. []
+%
+% 3. O que outros autores fazem para resolver esse problema
+% - Existem algumas iniciativas na área de ensino do xadrez...
+%
+% 4. Materiais e métodos que serão utilizados para resolver
+% o problema
+% - Os Algoritmos Genéticos~(\textit{Genetic Algorithms}~-~GA) ...
+% - A Inteligência Artificial~(IA) ...
+%
+% 5. Apresenta a metodologia
+% - Neste trabalho será apresentado um sistema combinando ...
+%
+% 6. Prévia dos resultados
+% - Os experimentos foram realizados usando ...
+% - Os resultados mostraram que ...
+%
+% 7. Divisão do trabalho
+
+A aplicação da Inteligência Artificial~(IA) tem se mostrado cada vez mais promissora em diversas áreas, incluindo a educação. Um campo específico que tem se beneficiado dessa tecnologia é o ensino do xadrez. O xadrez é um jogo estratégico complexo que requer habilidades cognitivas avançadas, como planejamento, tomada de decisão e análise de padrões. Nesse contexto, a IA tem sido utilizada para desenvolver sistemas de ensino do xadrez que auxiliam os jogadores a aprimorarem suas habilidades e estratégias~\cite{autor1, autor2}.
+
+De acordo com \citeonline{autor1}, ``a aplicação da IA no ensino do xadrez tem o potencial de revolucionar a forma como os jogadores aprendem e aperfeiçoam suas habilidades''. Esses sistemas usam algoritmos avançados de IA, como redes neurais e aprendizado de máquina, para analisar jogos passados, identificar padrões e sugerir comandos intuitivos. Além disso, eles podem simular partidas e fornecer \textit{feedback} personalizado aos jogadores, permitindo um aprendizado mais eficiente e individualizado.
+
+Outro estudo realizado por \citeonline{autor2} destaca que ``a aplicação de IA no ensino do xadrez não apenas melhora o desempenho dos jogadores, mas também promove a criatividade e o pensamento crítico''. Ao interagir com sistemas de IA, os jogadores são desafiados a pensar de forma estratégica, explorar diferentes possibilidades e tomar decisões controladas.Isso estimula o desenvolvimento de habilidades cognitivas essenciais, que podem ser aplicadas não apenas no xadrez, mas também em outras áreas da vida.
+
+
+Os Algoritmos Genéticos~(AGs) têm sido amplamente utilizados em diversas áreas, incluindo a otimização de problemas complexos e a tomada de decisões. No contexto do ensino do Xadrez, esses algoritmos podem exercer um papel fundamental na criação de sistemas de IA capazes de jogar xadrez de forma estratégica e competitiva. Os AGs oferecem uma abordagem promissora para aprimorar as habilidades de jogo e a tomada de decisões em partidas de xadrez~\cite{autor3}. 
+
+
+Este trabalho está organizado/dividido como segue. O Capítulo~\ref{cap:fundamentacao} apresenta os conceito de~IA e~GA. O Capítulo~\ref{cap:revisao} apresenta os trabalhos relacionados na aplicação de~IA no ensino do xadrez e o Capítulo~\ref{cap:metodologia} apresenta a metodologia proposta. Os resultados experimentais são apresentados no Capítulo~\ref{cap:resultados}. Finalmente, o Capítulo~\ref{cap:conclusao} apresenta as considerações finais.
+
+
+% -----------------------------------------------------------------------
+% -----------------------------------------------------------------------
+\chapter{Fundamentação Teórica}
+\label{cap:fundamentacao}
+
+% Introdução do capítulo
+Este capítulo apresenta ... 
+
+\section{Fundamentos do xadrez}
+
+% História
+
+% Campeaonato
+
+% Regras
+\subsection{Regras}
+
+
+% Todo elemento não textual: tabelas, figuras, quadros, algoritmos, etc. devem estar apresentados no texto antes de aparecerem.
+
+A Figura~\ref{fig:tabuleiro} ilustra um tabuleiro de xadrez. O tabuleiro é composto por ...
+
+\begin{figure}[!htb]
+    \legenda[fig:tabuleiro]{Configuração de um tabuleiro de xadrez}
+    \fig{scale=0.3}{img/tabuleiro}
+    
+    % Fonte criada pelo próprio autor
+    \fonteautor
+\end{figure}
+
+
+O xadrez é composto por 16 peças, que são: (...) A Figura~\ref{fig:pecas} apresenta/ilustra/mostra/descreve ...
+
+\begin{figure}[!htb]
+    \legenda[fig:pecas]{Lista de peças do xadrez}
+    \sfig{scale=0.1}{img/tabuleiro}\hfil
+    \sfig{scale=0.1}{img/tabuleiro}\hfil
+    \sfig{scale=0.1}{img/tabuleiro}
+
+    \sfig{scale=0.1}{img/tabuleiro}\hfil
+    \sfig{scale=0.1}{img/tabuleiro}\hfil
+    \sfig{scale=0.1}{img/tabuleiro}
+    
+    % Fonte criada pelo próprio autor
+    \fonteautores
+\end{figure}
+
+A Figura~\ref{fig:pecas2} apresenta ...
+O Rei (ver Figura~\ref{fig:rei}) é a peça....
+
+\begin{figure}[!htb]
+    \legenda[fig:pecas2]{Lista de peças do xadrez}
+    \lfig[fig:peao]{scale=0.1}{img/tabuleiro}{Peão}\hfil
+    \lfig[fig:bispo]{scale=0.1}{img/tabuleiro}{Bispo}\hfil
+    \lfig[fig:cavalo]{scale=0.1}{img/tabuleiro}{Cavalo}\hfil
+    
+    \lfig[fig:torre]{scale=0.1}{img/tabuleiro}{Torre}\hfil
+    \lfig[fig:rei]{scale=0.1}{img/tabuleiro}{Rei}\hfil
+    \lfig[fig:dama]{scale=0.1}{img/tabuleiro}{Dama}\hfil
+
+    % Fonte criada pelo próprio autor
+    \fonte{\citeonline{autor1}}
+\end{figure}
+
+
+
+\section{Inteligência Artificial (IA)}
+
+A Inteligência Artificial~(IA) é uma área de ...
+
+
+\section{Algoritmos Genéticos (GA)}
+
+...
+
+\section{Ensino do xadrez nas escolas}
+
+...
+
+
+% -----------------------------------------------------------------------
+% -----------------------------------------------------------------------
+\chapter{Revisão da Literatura}
+\label{cap:revisao}
+
+% Um parágrafo introdutório
+Este capítulo apresenta ...
+
+\section{Tema 1}
+
+% Citação direta para os trabalhos relacionados - citeonline
+
+\citeonline{autor1} apresenta/descreve sobre ...
+
+
+\citeonline{autor2} apresenta/descreve sobre ... 
+
+De acordo com~\citeonline{autor1},...
+
+
+Segundo~\citeonline{autor2}, ``o xadrez (...) é ...''.
+
+\begin{citacao}
+As citações diretas, no texto, com mais de três linhas, devem ser
+destacadas com recuo de 4 cm da margem esquerda, com letra menor que
+a do texto utilizado e sem as aspas. No caso de documentos datilografados,
+deve-se observar apenas o recuo \cite[5.3]{autor1}    
+\end{citacao}
+
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas lacus libero, eu facilisis massa convallis vitae. Phasellus vel sapien vel metus euismod vestibulum quis id risus. Fusce neque dolor, condimentum non dolor ac, volutpat venenatis libero. Donec sollicitudin suscipit orci vitae tempor. Quisque ex lectus, auctor ut nisi at, viverra cursus quam. Duis vel leo in tellus dignissim facilisis sed eget tortor~\cite{autor1}. Nam lacinia, sem vel viverra egestas, neque metus dictum ligula, eu pharetra elit ex vitae tortor. Nunc nibh ante, consequat quis ornare ut, posuere a diam. Fusce massa lectus, tristique ac dui sit amet, euismod dapibus magna. Aliquam nulla augue, faucibus at hendrerit sit amet, dictum nec leo. Nunc varius ex nulla, eu tincidunt dolor cursus nec. Donec porta nulla massa, nec dapibus lorem luctus sed. Nulla malesuada dui sit amet ornare consequat. Pellentesque nec finibus odio. Nam vel interdum erat~\cite{autor1, autor2, autor3}. 
+
+\section{Comparação entre os trabalhos}
+
+O Quadro~\ref{qua:comparacao} apresenta ...
+
+% TODO: Pesquisar qual o comando para quebrar
+% linhas dentro da tabela
+\begin{quadro}[!htb]
+    \legenda[qua:comparacao]{Comparativo dos trabalhos relacionados}
+    \begin{tabular}{|l||l|l|r|}
+        \hline
+        \textbf{Trabalho} & \textbf{Algortimo} & \textbf{Base de dados} & \textbf{Resultados} \\
+        \hline\hline
+        \citeonline{autor1} & GA    & IEEE   & 92\%    \\ \hline
+        \citeonline{autor2} & SA    & IEEE   & 93\%    \\ \hline
+    \end{tabular}
+
+    \fonteautor
+\end{quadro}
+
+
+
+% -----------------------------------------------------------------------
+% -----------------------------------------------------------------------
+\chapter{Metodologia}
+\label{cap:metodologia}
+
+% Introdução do capítulo
+Este capítulo ...
+
+O processo desenvolvido é apresentado na Figura~\ref{fig:metodologia}. A primeira etapa é a aquisição das imagens....
+
+Em seguida, na etapa de (...), são realizados (...)
+
+\begin{lista}
+    \item a problematização, a motivação e a justificativa da escolha do tema;
+    \item o problema de pesquisa e suas hipóteses, se houver,
+    \item a metodologia da pesquisa;
+    \item o referencial teórico e, ainda,
+    \item os tópicos principais do desenvolvimento, dando o roteiro ou
+    ordem de exposição no decorrer da parte textual.
+\end{lista}
+
+\section{Aquisição das imagens}
+
+\section{Pré-processamento}
+
+
+% -----------------------------------------------------------------------
+% -----------------------------------------------------------------------
+\chapter{Resultados Experimentais}
+\label{cap:resultados}
+
+% Introdução do capítulo
+Este capítulo (...)
+
+% Quadro resumindo os experimentos realizados
+
+% Uma seção com cada experimento + tabels/graficos com os resultados + discussão
+
+% Última seção com a discussão
+% Resumo com os melhores resultados + conclusões que vc tirou
+
+
+% -----------------------------------------------------------------------
+% -----------------------------------------------------------------------
+\chapter{Considerações Finais}
+\label{cap:conclusao}
+
+% Motivação/
+
+% O que os autores propuseram
+
+% Resumir a metodologia
+
+% Ressaltar os resultados
+
+% Conclusao da discussão
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{referencias}
+
+
+\end{document}
+
+
+
+
+
+
